@@ -1,0 +1,42 @@
+.article {
+  padding: 1em;
+  margin: 1em;
+  background: white;
+  
+  &-author {
+    height: 2em;
+    text-align: right;
+    float: right;
+    white-space: nowrap;
+    padding-right: 3em;
+    position: relative;
+    
+    &-photo {
+      position: absolute;
+      right: 0;
+      width: 2em;
+      height: 2em;
+      border-radius: 100%;
+    }
+    
+    &-name {
+      display: block;
+    }
+    
+    &-job {
+      display: block;
+    }
+  }
+  
+  &-title {
+    font-size: 2em;
+  }
+  
+  p {
+    margin: 1em 0;
+  }
+  
+  :last-child {
+    margin-bottom: 0;
+  }
+}

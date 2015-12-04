@@ -1,0 +1,158 @@
+@import "breakpoints";
+
+.header {
+  $padding: 1em;
+
+  background: white;
+  padding: $padding $padding 0; // Bottom padding applied by ::after.
+  text-align: center;
+  
+  &-logo {
+    &-image {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
+  &-summary {
+    $font-size: 1.5em;
+    $line-height: 2em / $font-size * 1em; // Multiply by 1em for unit.
+    
+    font-size: $font-size;
+    line-height: $line-height;
+    margin-top: ($line-height - $font-size) / -2;
+    
+    // Used to specify a phrase a user agent should prefer to keep on the same
+    // line when possible.
+    &-line {
+      display: inline-block;
+    }
+  }
+  
+  &-navigation {
+    margin-top: 1em;
+    
+    &-link {
+      &-replaceable {
+        font-size: 0;
+      }
+      
+      &.facebook {
+        &:after {
+          content: "F";
+        }
+      }
+      
+      &.twitter {
+        &:after {
+          content: "T";
+        }
+      }
+    }
+  }
+  
+  &:after {
+    // Draw background.
+    // Without parentheses Sass will interpret it as $padding - $padding (= 0).
+    margin: $padding (-$padding) 0;
+    content: "";
+    display: block;
+    height: 3em;
+    background: url(/images/border-h.png);
+  }
+  
+  @include big {
+    $width: 17em;
+    $border-width: 3em;
+
+    width: $width;
+    margin: 0;
+    padding: 2em $border-width 0 $padding;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    
+    @at-root body {
+      padding-left: $padding + $width + $border-width;
+    }
+    
+    &:after {
+      margin: 0;
+      background-image: url(/images/border-v.png);
+      position: absolute;
+      top: 0;
+      left: $width + $padding;
+      bottom: 0;
+      width: $border-width;
+      height: auto;
+    }
+    
+    &-logo {
+      height: 8em;
+    }
+    
+    &-navigation {
+      $height: 3em;
+      margin: $height (-$padding) 0;
+      
+      &-link {
+        $font-size: 1.2em;
+        $height: $height / $font-size * 1em; // Multiply by 1em for unit.
+        $navigation-padding: $padding + 1em;
+        color: inherit;
+        font-size: $font-size;
+        height: $height;
+        line-height: $height;
+        display: block;
+        position: relative;
+                
+        // The [class] is to bump specifity and override the text replacement
+        // applied to .header-navigation-link outside the breakpoint.
+        //
+        // Note that since this is nested inside a class selector, adding the
+        // [class] is tautologous — the only effect it has is increasing
+        // specificity.
+        &[class]:after, &:last-child:before {
+          content: "";
+          display: block;
+          height: 1px;
+          background: #ccc;
+          position: absolute;
+          top: 0;
+          left: 1em * $navigation-padding / $font-size;
+          right: 1em * $navigation-padding / $font-size;
+        }
+        
+        &:last-child:before {
+          // Equivalent to having another link with a border on the top row
+          // of pixels.
+          top: 100%;
+        }
+        
+        $lgbt-pride-colors: (
+          #e40304,
+          #ff8c00,
+          #ffed00,
+          #008027,
+          #004dff,
+          #750787
+        );
+        
+        @for $i from 1 through length($lgbt-pride-colors) {
+          &:nth-child(#{length($lgbt-pride-colors)}n + #{$i}) {
+            &:hover, &:focus {
+              color: nth($lgbt-pride-colors, $i);
+            }
+          }
+        }
+        
+        &-replaceable {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}

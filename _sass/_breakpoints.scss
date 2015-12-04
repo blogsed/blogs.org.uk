@@ -1,0 +1,12 @@
+$big: false !default;
+
+@function breakpoint() {
+  @if $big { @return 0; }
+  @return 50em;
+}
+
+@mixin big {
+  @media (min-width: breakpoint()) {
+    @content;
+  }
+}

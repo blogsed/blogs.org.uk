@@ -1,0 +1,38 @@
+.event {
+  $padding: 1em;
+  $date-width: 6em;
+  
+  box-sizing: border-box;
+  margin: 1em;
+  padding: $padding $padding $padding ($date-width + $padding * 2);
+  position: relative;
+  background: white;
+  
+  &-time {
+    position: absolute;
+    top: $padding;
+    left: $padding;
+    width: $date-width;
+    text-align: center;
+    
+    &-day {
+      display: block;
+    }
+    
+    &-date {
+      font-size: 3em;
+      display: block;
+    }
+    
+    &-month {
+      display: block;
+    }
+  }
+  
+  &-name {
+    $font-size: 2em;
+    
+    font-size: $font-size;
+    margin-bottom: (1em / $font-size) * 1em;
+  }
+}

@@ -1,0 +1,12 @@
+---
+---
+
+/*
+  This file exists to expose reset as a stylesheet on its own, for debugging
+  purposes.
+
+  Reset should generally be imported with Sass rather than linking to the file
+  generated from this one directly.
+ */
+
+@import "reset";
