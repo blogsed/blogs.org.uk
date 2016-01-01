@@ -1,6 +1,8 @@
+@import "colors";
+
 .article {
   padding: 1em;
-  margin: 1em;
+  margin: 1em 0;
   background: white;
   
   &-author {
@@ -30,6 +32,7 @@
   
   &-title {
     font-size: 2em;
+    font-weight: bold;
   }
   
   p {

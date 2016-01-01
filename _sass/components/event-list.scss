@@ -1,0 +1,40 @@
+@import "colors";
+
+.event-list {
+  $columns: 3;
+  $spacing: 2%;
+  overflow: scroll;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  position: relative;
+  
+  // scroll nicely on iOS
+  -webkit-overflow-scrolling: touch;
+  
+  &.overflow {
+    &:after {
+      font-size: 1rem;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 4em;
+      background: linear-gradient(to right, rgba(#d20091, 0), $green);
+    }
+  }
+  
+  .event {
+    display: inline-block;
+    font-size: 1rem;
+    width: 40%;
+    box-sizing: border-box;
+    margin: 0 $spacing 0 0;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

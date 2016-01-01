@@ -1,4 +1,6 @@
+@import "lib";
 @import "breakpoints";
+@import "colors";
 
 .header {
   $padding: 1em;
@@ -9,7 +11,8 @@
   
   &-logo {
     &-image {
-      max-width: 100%;
+      width: 100%;
+      max-width: 20em;
       display: block;
       margin: 0 auto;
     }
@@ -22,6 +25,11 @@
     font-size: $font-size;
     line-height: $line-height;
     margin-top: ($line-height - $font-size) / -2;
+    
+    // In here because need access to $font-size
+    @include big {
+      max-width: 17em / $font-size * 1em;
+    }
     
     // Used to specify a phrase a user agent should prefer to keep on the same
     // line when possible.
@@ -62,21 +70,26 @@
     background: url(/images/border-h.png);
   }
   
+  
+  $width: 33%;
+  $inner-width: 17em;
+  $border-width: 3em;
+  $padding-left: $border-width;
+  $padding-right: $padding + 1em;
+  
   @include big {
-    $width: 17em;
-    $border-width: 3em;
-
     width: $width;
     margin: 0;
-    padding: 2em $border-width 0 $padding;
-    position: fixed;
+    padding: 2em $padding-left 0 $padding-right;
+    position: absolute;
     overflow: auto;
     top: 0;
     left: 0;
     bottom: 0;
+    box-sizing: border-box;
     
     @at-root body {
-      padding-left: $padding + $width + $border-width;
+      margin-left: $width;
     }
     
     &:after {
@@ -84,19 +97,27 @@
       background-image: url(/images/border-v.png);
       position: absolute;
       top: 0;
-      left: $width + $padding;
+      right: 0;
       bottom: 0;
       width: $border-width;
       height: auto;
     }
     
     &-logo {
-      height: 8em;
+      max-width: 17em;
+      margin: 0 auto;
+    }
+    
+    &-summary {
+      // max-width set above
+      margin: 0 auto;
     }
     
     &-navigation {
       $height: 3em;
-      margin: $height (-$padding) 0;
+      
+      margin: $height auto;
+      max-width: 17em;
       
       &-link {
         $font-size: 1.2em;
@@ -108,6 +129,7 @@
         line-height: $height;
         display: block;
         position: relative;
+        margin: 0 1em;
                 
         // The [class] is to bump specifity and override the text replacement
         // applied to .header-navigation-link outside the breakpoint.
@@ -122,8 +144,8 @@
           background: #ccc;
           position: absolute;
           top: 0;
-          left: 1em * $navigation-padding / $font-size;
-          right: 1em * $navigation-padding / $font-size;
+          left: 0;
+          right: 0;
         }
         
         &:last-child:before {
@@ -131,15 +153,6 @@
           // of pixels.
           top: 100%;
         }
-        
-        $lgbt-pride-colors: (
-          #e40304,
-          #ff8c00,
-          #ffed00,
-          #008027,
-          #004dff,
-          #750787
-        );
         
         @for $i from 1 through length($lgbt-pride-colors) {
           &:nth-child(#{length($lgbt-pride-colors)}n + #{$i}) {
@@ -154,5 +167,14 @@
         }
       }
     }
+  }
+      
+  @media (min-width: 3 * ($padding-left + $inner-width + $padding-right)) {    
+    @function h-space($pc, $exp) {
+      @return pct-space("#{$width} - #{$padding-left} - #{$inner-width} - #{$padding-right}", $pc, $exp);
+    }
+
+    // Apply inside media query in case padding would be negative.
+    padding: h-space(100% / 3, "+ #{$padding-left}") h-space(100% / 3, "+ #{$padding-right}") 0 h-space(200% / 3, "+ #{$padding-left}");
   }
 }

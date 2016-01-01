@@ -1,4 +1,14 @@
+// IMPOROTANT: do not set margin-left on body as it is overridden by header
+
+@import "lib";
+
 body {
   background: #04bf7e;
   font-family: Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  
+  @function h-space($pc, $exp: "") {
+    @return pct-space("66% - 80ch", $pc, $exp);
+  }
+  
+  padding: h-space(200% / 9) h-space(700% / 9, "+ 1em") 0 h-space(200% / 9, "+ 1em");
 }

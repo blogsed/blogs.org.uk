@@ -1,38 +1,63 @@
+@import "colors";
+
+@font-face {
+  font-family: entypo;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/entypo/2.0/entypo-social.ttf);
+}
+
+@function em($em, $font-size) {
+  @return ($em * 1em) / $font-size * 1em;
+}
+
 .event {
-  $padding: 1em;
-  $date-width: 6em;
+  $background-color: rgba($pink, 0.8);
   
-  box-sizing: border-box;
-  margin: 1em;
-  padding: $padding $padding $padding ($date-width + $padding * 2);
-  position: relative;
-  background: white;
+  background: opacify($background-color, 1) url(https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xla1/v/t1.0-9/12108885_928472563856557_5906064377700101395_n.jpg?oh=a2dfc6207f223aa0f4011d3304d3812e&oe=56D4BA08);
+  background-size: cover;
+  background-position: center center;
+  margin: 1em 0;
+  color: white;
+  line-height: (20px / 16px);
+  overflow: hidden;
   
-  &-time {
-    position: absolute;
-    top: $padding;
-    left: $padding;
-    width: $date-width;
-    text-align: center;
+  &-content {
+    display: inline-block;
+    background: $background-color;
+    padding: 1em;
+    position: relative;
     
-    &-day {
-      display: block;
+    &-name {
+      $font-size: 2em;
+      
+//       margin: em(0.5, $font-size) 0;
+      font-size: $font-size;
+      font-weight: bold;
     }
     
-    &-date {
-      font-size: 3em;
-      display: block;
+    &-link a {
+      color: inherit;
     }
     
-    &-month {
+    &:before {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      content: "";
+      height: 20em;
       display: block;
+      background: linear-gradient(to bottom, $background-color, rgba($background-color, 0));
     }
-  }
-  
-  &-name {
-    $font-size: 2em;
     
-    font-size: $font-size;
-    margin-bottom: (1em / $font-size) * 1em;
+    &:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      width: 50%;
+      content: "";
+      display: block;
+      background: linear-gradient(to right, $background-color, rgba($background-color, 0));
+    }
   }
 }
