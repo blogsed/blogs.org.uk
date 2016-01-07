@@ -1,5 +1,9 @@
 // IMPOROTANT: do not set margin-left on body as it is overridden by header
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: #04bf7e;
   font-family: Avenir, "Avenir Next", Helvetica, Arial, sans-serif;

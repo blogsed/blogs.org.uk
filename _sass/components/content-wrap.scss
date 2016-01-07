@@ -1,4 +1,10 @@
-.content-wrap {
-  max-width: 70ch;
-  margin: 0 auto;
+@import "breakpoints";
+
+@include big {
+  .content-wrap {
+    width: 67%;
+    padding: 0 1em;
+    box-sizing: border-box;
+    float: left;
+  }
 }
