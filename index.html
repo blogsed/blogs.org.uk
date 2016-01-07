@@ -11,13 +11,15 @@
   </head>
   <body>
     {% include header.html %}
-    {% include event.html %}
-    {% include article.html %}
-    <ul class="event-list overflow">
+    <main role="main" class="content-wrap">
       {% include event.html %}
-      {% include event.html %}
-      {% include event.html %}
-      {% include event.html %}
-    </ul>
+      {% include article.html %}
+      <ul class="event-list overflow">
+        {% include event.html %}
+        {% include event.html %}
+        {% include event.html %}
+        {% include event.html %}
+      </ul>
+    </main>
   </body>
 </html>
