@@ -1,6 +1,0 @@
-// This file contains reusable functions and mixins
-
-// Allows margin/padding to be specified using percentage of available space;
-@function pct-space($space, $pc, $exp: "") {
-  @return calc(((#{$space}) * #{$pc / 100%}) #{$exp})
-}

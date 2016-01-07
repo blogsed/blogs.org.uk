@@ -1,4 +1,3 @@
-@import "lib";
 @import "breakpoints";
 @import "colors";
 
@@ -167,14 +166,5 @@
         }
       }
     }
-  }
-      
-  @media (min-width: 3 * ($padding-left + $inner-width + $padding-right)) {    
-    @function h-space($pc, $exp) {
-      @return pct-space("#{$width} - #{$padding-left} - #{$inner-width} - #{$padding-right}", $pc, $exp);
-    }
-
-    // Apply inside media query in case padding would be negative.
-    padding: h-space(100% / 3, "+ #{$padding-left}") h-space(100% / 3, "+ #{$padding-right}") 0 h-space(200% / 3, "+ #{$padding-left}");
   }
 }
