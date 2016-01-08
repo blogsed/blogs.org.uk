@@ -3,7 +3,8 @@
 .event-list {
   $columns: 3;
   $spacing: 2%;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden; // needed in Chrome and Firefox
   width: 100%;
   white-space: nowrap;
   font-size: 1em;
@@ -11,22 +12,13 @@
   max-width: 70ch;
   margin: 0 auto;
   
+  // hardware accelarate
+  // Chrome lags slightly in applying the coloured overlays
+  // without this.
+  transform: translateZ(0);
+  
   // scroll nicely on iOS
   -webkit-overflow-scrolling: touch;
-  
-  &.overflow {
-    &:after {
-      font-size: 1rem;
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 4em;
-      background: linear-gradient(to right, rgba(#d20091, 0), $green);
-    }
-  }
   
   .event {
     display: inline-block;

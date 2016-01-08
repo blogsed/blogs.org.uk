@@ -4,7 +4,7 @@
 html {
   background: $green;
   
-  @include big {
+  @media (min-width: 75em) {
     padding: 0 10%;
     
     &:before, &:after {

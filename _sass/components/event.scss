@@ -11,8 +11,8 @@
 
 .event {
   $background-color: rgba($pink, 0.8);
-  
-  background: opacify($background-color, 1) url(https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xla1/v/t1.0-9/12108885_928472563856557_5906064377700101395_n.jpg?oh=a2dfc6207f223aa0f4011d3304d3812e&oe=56D4BA08);
+
+  background: opacify($background-color, 1) url(https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/12247186_1194685997212593_7640645545139891177_n.jpg?oh=5a5d8169ff1051061a13345f8d65006d&oe=5749F25B);
   background-size: cover;
   background-position: center center;
   margin: 1em auto;
@@ -61,18 +61,18 @@
     background: $background-color;
     padding: 1em 1em 1.25em;
     position: relative;
-    
+
     &-name {
       $font-size: 2em;
-      
+
       font-size: $font-size;
       font-weight: bold;
     }
-    
+
     &-link a {
       color: inherit;
     }
-    
+
     &:before {
       position: absolute;
       top: 100%;
@@ -83,7 +83,7 @@
       display: block;
       background: linear-gradient(to bottom, $background-color, rgba($background-color, 0));
     }
-    
+
     &:after {
       position: absolute;
       top: 0;
