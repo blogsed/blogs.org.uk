@@ -20,8 +20,43 @@
   line-height: (20px / 16px);
   max-width: 70ch;
   overflow: hidden;
-  
+  position: relative;
+
+  &:hover:before {
+    content: "";
+    background: rgba($background-color, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &-cover-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &-content .event-cover-link {
+    right: -50%; // go over ::after
+  }
+
+  .event-content-link {
+    position: relative;
+    float: left; // don't overlap background past end of text
+    clear: both;
+    z-index: 1000;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   &-content {
+    z-index: 1;
     display: inline-block;
     background: $background-color;
     padding: 1em 1em 1.25em;
@@ -58,6 +93,7 @@
       content: "";
       display: block;
       background: linear-gradient(to right, $background-color, rgba($background-color, 0));
+      z-index: -1;
     }
   }
 }
