@@ -1,10 +1,17 @@
+@import "colors";
 @import "breakpoints";
 
-@include big {
-  .content-wrap {
+.content-wrap {
+  background: $green;
+  padding: 0 1em;
+
+  @include big {
     width: 67%;
-    padding: 0 1em;
+    min-height: 100%;
+    padding-top: 5%;
     box-sizing: border-box;
     float: left;
+    position: relative;
+    z-index: 1;
   }
 }

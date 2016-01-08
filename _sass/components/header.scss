@@ -79,7 +79,7 @@
   @include big {
     width: $width;
     margin: 0;
-    padding: 2em $padding-left 0 $padding-right;
+    padding: 5% $padding-left 0 $padding-right;
     float: left;
     box-sizing: border-box;
     position: relative;
@@ -98,7 +98,7 @@
     
     &-logo {
       max-width: 17em;
-      margin: 0 auto;
+      margin: 1em auto;
     }
     
     &-summary {

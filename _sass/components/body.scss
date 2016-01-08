@@ -1,10 +1,30 @@
-// IMPOROTANT: do not set margin-left on body as it is overridden by header
+@import "colors";
+@import "breakpoints";
+
+html {
+  background: $green;
+  
+  @include big {
+    padding: 0 10%;
+    
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+    }
+    
+    &:before { left: 0; background: white; }
+    &:after { right: 0; background: $green; }
+  }
+}
 
 html, body {
   height: 100%;
 }
 
 body {
-  background: #04bf7e;
+//   background: #04bf7e;
   font-family: Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 }

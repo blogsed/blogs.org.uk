@@ -1,11 +1,15 @@
 @import "colors";
 
 .article {
-  padding: 1em;
-  margin: 1em 0;
+  padding: 1.25em 1em 1em;
+  margin: 1em auto;
   background: white;
+  max-width: 70ch;
+  box-sizing: border-box;
+  line-height: 1.25;
   
   &-author {
+    line-height: 1;
     height: 2em;
     text-align: right;
     float: right;
@@ -33,6 +37,7 @@
   &-title {
     font-size: 2em;
     font-weight: bold;
+    line-height: 1;
   }
   
   p {

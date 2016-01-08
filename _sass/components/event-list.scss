@@ -6,8 +6,10 @@
   overflow: scroll;
   width: 100%;
   white-space: nowrap;
-  font-size: 0;
+  font-size: 1em;
   position: relative;
+  max-width: 70ch;
+  margin: 0 auto;
   
   // scroll nicely on iOS
   -webkit-overflow-scrolling: touch;
