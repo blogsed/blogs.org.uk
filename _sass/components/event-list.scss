@@ -2,7 +2,7 @@
 
 .event-list {
   $columns: 3;
-  $spacing: 2%;
+  $spacing: 11.5px; // HACK: adjust for display: inline-block adding space
   overflow-x: scroll;
   overflow-y: hidden; // needed in Chrome and Firefox
   width: 100%;
@@ -11,22 +11,30 @@
   position: relative;
   max-width: 70ch;
   margin: 0 auto;
-  
+
   // hardware accelarate
   // Chrome lags slightly in applying the coloured overlays
   // without this.
   transform: translateZ(0);
-  
+
   // scroll nicely on iOS
   -webkit-overflow-scrolling: touch;
-  
+
   .event {
     display: inline-block;
-    font-size: 1rem;
-    box-sizing: border-box;
     margin: 0 $spacing 0 0;
-    
-    &:last-child {
+
+    // make single events full width
+    &:only-child {
+      display: block;
+    }
+
+    // make dual events fill space
+    &:first-child:nth-last-child(2), &:last-child:nth-child(2) {
+      min-width: calc(50% - #{$spacing / 2});
+    }
+
+    &:only-child, &:last-child {
       margin-right: 0;
     }
   }
