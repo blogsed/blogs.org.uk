@@ -17,6 +17,16 @@
   // without this.
   transform: translateZ(0);
 
+  // HACK: adding the transform makes text thin in Safari
+  // apply this globally to all events so ones in .event-list
+  // don't stand out.
+  //
+  // doing this just makes all events have really thin text,
+  // which isn't ideal…
+  @at-root .event {
+    -webkit-font-smoothing: antialiased
+  }
+
   // scroll nicely on iOS
   -webkit-overflow-scrolling: touch;
 
