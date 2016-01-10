@@ -7,7 +7,21 @@
   background: white;
   padding: $padding $padding 0; // Bottom padding applied by ::after.
   text-align: center;
-  
+
+  &-home-link {
+    color: black;
+    display: block;
+    text-decoration: none;
+
+    &:hover, &:focus, &:active {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: red;
+    }
+  }
+
   &-logo {
     &-image {
       width: 100%;
@@ -16,41 +30,43 @@
       margin: 0 auto;
     }
   }
-  
+
   &-summary {
     $font-size: 1.5em;
     $line-height: 2em / $font-size * 1em; // Multiply by 1em for unit.
-    
+
     font-size: $font-size;
     line-height: $line-height;
     margin-top: ($line-height - $font-size) / -2;
-    
+    text-decoration: inherit; // IDK why this needs to be specified.
+
     // In here because need access to $font-size
     @include big {
       max-width: 17em / $font-size * 1em;
     }
-    
+
     // Used to specify a phrase a user agent should prefer to keep on the same
     // line when possible.
     &-line {
       display: inline-block;
+      text-decoration: inherit; // see above
     }
   }
-  
+
   &-navigation {
     margin-top: 1em;
-    
+
     &-link {
       &-replaceable {
         font-size: 0;
       }
-      
+
       &.facebook {
         &:after {
           content: "F";
         }
       }
-      
+
       &.twitter {
         &:after {
           content: "T";
@@ -58,7 +74,7 @@
       }
     }
   }
-  
+
   &:after {
     // Draw background.
     // Without parentheses Sass will interpret it as $padding - $padding (= 0).
@@ -68,14 +84,14 @@
     height: 3em;
     background: url(/images/border-h.png);
   }
-  
-  
+
+
   $width: 33%;
   $inner-width: 17em;
   $border-width: 3em;
   $padding-left: $border-width;
   $padding-right: $padding + 1em;
-  
+
   @include big {
     width: $width;
     margin: 0;
@@ -84,7 +100,7 @@
     box-sizing: border-box;
     position: relative;
     min-height: 100%;
-    
+
     &:after {
       margin: 0;
       background-image: url(/images/border-v.png);
@@ -95,23 +111,23 @@
       width: $border-width;
       height: auto;
     }
-    
+
     &-logo {
       max-width: 17em;
       margin: 1em auto 0;
     }
-    
+
     &-summary {
       // max-width set above
       margin: 0 auto;
     }
-    
+
     &-navigation {
       $height: 3em;
-      
+
       margin: $height auto;
       max-width: 17em;
-      
+
       &-link {
         $font-size: 1.2em;
         $height: $height / $font-size * 1em; // Multiply by 1em for unit.
@@ -123,7 +139,7 @@
         display: block;
         position: relative;
         margin: 0 1em;
-                
+
         // The [class] is to bump specifity and override the text replacement
         // applied to .header-navigation-link outside the breakpoint.
         //
@@ -140,13 +156,13 @@
           left: 0;
           right: 0;
         }
-        
+
         &:last-child:before {
           // Equivalent to having another link with a border on the top row
           // of pixels.
           top: 100%;
         }
-        
+
         @for $i from 1 through length($lgbt-pride-colors) {
           &:nth-child(#{length($lgbt-pride-colors)}n + #{$i}) {
             &:hover, &:focus {
@@ -154,7 +170,7 @@
             }
           }
         }
-        
+
         &-replaceable {
           font-size: 1em;
         }
