@@ -1,0 +1,20 @@
+---
+layout: base
+---
+
+{% assign next_event = site.posts | last %}
+{{ next_event.output }}
+
+{{ content }}
+
+<ul class="event-list">
+
+  {% assign last_event_index = site.posts | size %}
+  {% for event in site.posts %}
+    {% if forloop.index == last_event_index %}
+      {% break %}
+    {% endif %}
+    {{ event.output }}
+  {% endfor %}
+
+</ul>

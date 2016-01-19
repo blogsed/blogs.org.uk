@@ -6,7 +6,6 @@ sum = (list) -> list.reduce (a, e) -> a + e
 ancestors = (node) -> if node then ancestors(node.parentNode).concat(node) else []
 
 # get node coordinates
-top = (node) -> sum(n.offsetTop or 0 for n in ancestors node)
 left = (node) -> sum(n.offsetLeft or 0 for n in ancestors node)
 right = (node) -> window.innerWidth - list.clientWidth - left list
 
@@ -37,7 +36,7 @@ addIndicator list for list in document.getElementsByClassName "event-list"
 do layoutIndicators = ->
   for [list, indicators] in listIndicators
     for indicator in indicators
-      indicator.style.top = "#{top list}px"
+      indicator.style.top = "#{list.offsetTop}px"
       indicator.style.height = "#{list.clientHeight}px"
 
     [leftIndicator, rightIndicator] = indicators

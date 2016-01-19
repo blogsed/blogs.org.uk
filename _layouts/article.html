@@ -1,0 +1,17 @@
+---
+layout: home
+---
+
+<article class="article h-entry">
+  {% if page.author %}
+    <footer class="article-author p-author h-card">
+      <img src="/images/sam.jpg" alt="Photo of {{ page.author.name }}" class="article-author-photo u-photo">
+      <span class="article-author-name p-name">{{ page.author.name }}</span>
+      <span class="article-author-job p-job-title">{{ page.author.description }}</span>
+    </footer>
+  {% endif %}
+
+  <h2 class="article-title p-name">{{ page.title }}</h2>
+
+  {{ content }}
+</article>

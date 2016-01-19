@@ -1,2 +1,12 @@
 gems:
   - jekyll-coffeescript
+
+links:
+  email:
+    address: blogs.edinburgh@hotmail.co.uk
+    name: BLOGS — Edinburgh University's LGBT+ Society
+  facebook:
+    url: https://www.facebook.com/groups/edunilgbt/?hc_location=ufi
+    title: BLOGS - Edinburgh University's Lesbian, Gay, Bisexual, Trans & Intersex Soc
+
+future: true

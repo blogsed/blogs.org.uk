@@ -1,0 +1,14 @@
+<article class="event h-event">
+  <div class="event-content">
+    <h2 class="event-content-name p-name">{{ page.title }}</h2>
+    <p class="event-content-time">
+      <time class="dt-start" datetime="{{ page.date }}">{{ page.date | date: "%H:%M · %e %B %Y" }}</time>
+    </p>
+    <p class="event-content-location p-location">{{ page.location }}</p>
+    <p class="event-content-link icon-facebook"><a class="u-url" href="https://www.facebook.com/events/{{ page.facebook_id }}/" title="{{ page.title }}">View on Facebook</a></p>
+    <p class="event-content-link"><a class="u-url" href="https://www.facebook.com/ical/event.php?eid={{ page.facebook_id }}">Add to Calendar</a></p>
+    <a class="event-cover-link" href="https://www.facebook.com/events/{{ page.facebook_id }}/" title="{{ page.title }}"></a>
+  </div>
+  <a class="event-cover-link" href="https://www.facebook.com/events/{{ page.facebook_id }}/" title="{{ page.title }}"></a>
+</article>
+

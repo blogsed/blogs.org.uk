@@ -12,6 +12,7 @@
   max-width: 70ch;
   margin: 0 auto;
   position: relative;
+  display: flex;
 
   // hardware accelarate
   // Chrome lags slightly in applying the coloured overlays
@@ -51,6 +52,7 @@
   .event {
     display: inline-block;
     margin: 0 $spacing 0 0;
+    white-space: initial;
 
     // make single events full width
     &:only-of-type {
@@ -59,7 +61,7 @@
 
     // make dual events fill space
     &:first-of-type:nth-last-of-type(2), &:last-of-type:nth-of-type(2) {
-      min-width: calc(50% - #{$spacing / 2});
+      width: calc(50% - 8px);
     }
 
     &:only-of-type, &:last-of-type {
