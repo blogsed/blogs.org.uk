@@ -2,11 +2,14 @@
 layout: base
 ---
 
-{% assign next_event = site.posts | last %}
-{{ next_event.output }}
+{% if page.url == "/" %}
+  {% assign next_event = site.posts | last %}
+  {{ next_event.output }}
+{% endif %}
 
 {{ content }}
 
+{% if page.url == "/" %}
 <ul class="event-list">
 
   {% assign last_event_index = site.posts | size %}
@@ -18,3 +21,4 @@ layout: base
   {% endfor %}
 
 </ul>
+{% endif %}

@@ -1,5 +1,18 @@
 @import "colors";
 
+dl {
+  margin: 1em 0;
+}
+
+dt {
+  font-weight: bold;
+  font-style: italic;
+}
+
+dd {
+  text-indent: 1em;
+}
+
 .article {
   padding: 1.25em 1em 1em;
   margin: 1em auto;
@@ -7,7 +20,7 @@
   max-width: 70ch;
   box-sizing: border-box;
   line-height: 1.25;
-  
+
   &-author {
     line-height: 1;
     height: 2em;
@@ -16,7 +29,7 @@
     white-space: nowrap;
     padding-right: 3em;
     position: relative;
-    
+
     &-photo {
       position: absolute;
       right: 0;
@@ -24,26 +37,26 @@
       height: 2em;
       border-radius: 100%;
     }
-    
+
     &-name {
       display: block;
     }
-    
+
     &-job {
       display: block;
     }
   }
-  
+
   &-title {
     font-size: 2em;
     font-weight: bold;
     line-height: 1;
   }
-  
+
   p {
     margin: 1em 0;
   }
-  
+
   :last-child {
     margin-bottom: 0;
   }
