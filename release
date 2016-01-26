@@ -1,0 +1,14 @@
+#!/bin/sh
+git branch -D master
+git checkout --orphan master
+git reset
+git add -f _site
+git stash
+git add -A
+git reset --hard
+mv _site/* .
+rmdir site
+git add -A
+git commit -m "Generate site"
+git checkout -
+git push origin master
