@@ -12,7 +12,7 @@
 .event {
   $background-color: rgba($pink, 0.8);
 
-  background: opacify($background-color, 1) url(https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/12540761_1142664845753372_976838192188168226_n.jpg?oh=1d051924effaa6f98f8cefda9e961a92&oe=5730D024);
+  background: opacify($background-color, 1);
   background-size: cover;
   background-position: center center;
   margin: 1em auto;
