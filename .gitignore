@@ -8,6 +8,7 @@ _site/
 
 # Auto-generated files
 _data/events.yml
+images/events
 
 # github-pages should always be latest version
 Gemfile.lock
