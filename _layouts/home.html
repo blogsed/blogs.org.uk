@@ -3,22 +3,21 @@ layout: base
 ---
 
 {% if page.url == "/" %}
-  {% assign next_event = site.posts | last %}
-  {{ next_event.output }}
+  {% assign event = site.data.events.data | last %}
+  {% include event.html event=event %}
 {% endif %}
 
 {{ content }}
 
 {% if page.url == "/" %}
-<ul class="event-list">
-
-  {% assign last_event_index = site.posts | size %}
-  {% for event in site.posts %}
-    {% if forloop.index == last_event_index %}
-      {% break %}
-    {% endif %}
-    {{ event.output }}
-  {% endfor %}
-
-</ul>
+  <ol class="event-list">
+    <li>
+      {% for event in site.data.events.data reversed %}
+        {% if forloop.index == 1 %}
+          {% continue %}
+        {% endif %}
+        {% include event.html event=event %}
+      {% endfor %}
+    </li>
+  </ol>
 {% endif %}
