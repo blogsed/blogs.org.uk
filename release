@@ -1,14 +1,20 @@
 #!/bin/sh
-git branch -D master
+branch="$(git name-rev --name-only HEAD)"
+git add -A
+git stash
+git branch -D master 2> /dev/null
 git checkout --orphan master
 git reset
+jekyll build
 git add -f _site
-git stash
+git commit -m "Temporary _site commit"
+rm .gitignore
 git add -A
 git reset --hard
 mv _site/* .
-rmdir site
+rmdir _site
 git add -A
-git commit -m "Generate site"
-git checkout -
-git push origin master
+git commit --amend -m "Generate site"
+git checkout "$branch"
+git stash pop
+git push -f origin master
