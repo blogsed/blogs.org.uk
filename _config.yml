@@ -12,3 +12,5 @@ links:
 
 exclude:
   - CNAME
+  - Gemfile
+  - Gemfile.lock

@@ -8,3 +8,6 @@ _site/
 
 # Auto-generated files
 _data/events.json
+
+# github-pages should always be latest version
+Gemfile.lock

@@ -6,7 +6,7 @@ git stash
 branch="$(git name-rev --name-only HEAD)"
 git checkout --orphan release
 echo "\033[1mBuilding site\033[0m"
-jekyll build
+bundle exec jekyll build
 git reset
 git add -f _site
 git commit -m "Generate site"
