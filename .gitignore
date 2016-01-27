@@ -7,7 +7,7 @@ _site/
 .env
 
 # Auto-generated files
-_data/events.json
+_data/events.yml
 
 # github-pages should always be latest version
 Gemfile.lock
