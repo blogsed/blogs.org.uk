@@ -1,4 +1,10 @@
-.sass-cache
+# Standard Jekyll files
+_site/
+.sass-cache/
 .jekyll-metadata
-_site
 
+# Sensitive files
+.env
+
+# Auto-generated files
+_data/events.json
