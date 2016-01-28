@@ -11,6 +11,5 @@ links:
     title: BLOGS - Edinburgh University's Lesbian, Gay, Bisexual, Trans & Intersex Soc
 
 exclude:
-  - CNAME
   - Gemfile
   - Gemfile.lock
