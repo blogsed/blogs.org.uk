@@ -2,17 +2,14 @@
 set -ue
 
 echo "\033[1mStashing changes\033[0m"
+git add -A
 git stash
 branch="$(git name-rev --name-only HEAD)"
-git checkout --orphan master
-echo "\033[1mBuilding site\033[0m"
-bundle exec jekyll build
-git reset
-git add -f _site
-git commit -m "Generate site"
 echo "\033[1mPushing to GitHub\033[0m"
-git push origin `git subtree split --prefix _site HEAD`:refs/heads/master --force
-git add -A
+git checkout -b master
+git add -f _data/events.yml images/events
+git commit -m "Include auto-generated content"
+git push -f origin master
 git checkout "$branch"
 git branch -D master
 echo "\033[1mRestoring changes\033[0m"
