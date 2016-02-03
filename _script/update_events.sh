@@ -1,7 +1,7 @@
 #!/bin/sh
 set -ue
 
-source .env
+[ -f .env ] && source .env
 api="https://graph.facebook.com/v2.5"
 auth="access_token=$ACCESS_TOKEN"
 url="$api/$GROUP_ID/events?since=$(date +%s)&$auth"
