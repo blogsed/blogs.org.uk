@@ -4,12 +4,18 @@ set -ue
 [ -f .env ] && source .env
 api="https://graph.facebook.com/v2.5"
 auth="access_token=$ACCESS_TOKEN"
-url="$api/$GROUP_ID/events?since=$(date +%s)&$auth"
 
-mkdir -p _data
-json="$(curl "$url")"
-echo --- > _data/events.yml
-printf '%s' "$json" | sed 's/\\\//\//g' >> _data/events.yml
+mkdir -p _data/events
+
+get_events() {
+  url="$api/$1/events?since=$(date +%s)&$auth"
+  json="$(curl "$url")"
+  # convert to yaml
+  printf -- '---\n%s' "$json" | sed 's/\\\//\//g'
+}
+
+get_events "$PAGE_ID" > _data/events/page.yml
+get_events "$GROUP_ID" > _data/events/group.yml
 
 # Download images
 mkdir -p images/events
