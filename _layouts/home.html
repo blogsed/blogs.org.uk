@@ -5,7 +5,8 @@ layout: base
 {% comment %}
   Create events array
 
-  Once Jekyll upgrades to Liquid 4.0 this can be made _a lot_ simpler.
+  Once GitHub Pages upgrades to Liquid 4.0 this can be made
+  _a lot_ simpler by using the `concat:` filter.
 {% endcomment %}
 {% assign events = '' | split: '' %}
 {% for event in site.data.events.group.data %}
