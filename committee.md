@@ -7,6 +7,7 @@ title: BLOGS Committee
 
 <dt>Asexual and Aromantic Officer</dt>           <dd>Rosie Hawtin</dd>
 <dt>Bisexual and Pansexual Officer</dt>          <dd>Cynthia Hamadi</dd>
+<dt><abbr title="Black and Marginalised Ethnicities">BME</abbr> Officer</dt> <dd>Saaraa Sadig</dd>
 <dt>Campaigns Officer</dt>                       <dd>Ali Hudson</dd>
 <dt>Disability and Mental Health Officer</dt>    <dd>Ryan Bittinger</dd>
 <dt>LGBT+ Community Engagement Officer</dt>      <dd>Rachel Ram</dd>
