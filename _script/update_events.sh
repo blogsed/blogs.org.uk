@@ -1,7 +1,7 @@
 #!/bin/sh
 set -ue
 
-[ -f .env ] && source .env
+[ -f .env ] && . .env
 api="https://graph.facebook.com/v2.5"
 auth="access_token=$ACCESS_TOKEN"
 
