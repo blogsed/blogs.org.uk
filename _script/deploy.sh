@@ -13,4 +13,4 @@ git push -f origin master
 git checkout "$branch"
 git branch -D master
 echo "\033[1mRestoring changes\033[0m"
-git stash pop > /dev/null
+git stash pop > /dev/null || true
