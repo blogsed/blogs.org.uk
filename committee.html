@@ -1,0 +1,26 @@
+---
+layout: article
+title: BLOGS Committee
+---
+
+{% for group in site.data.committee %}
+
+  <h3>{{ group.name }}</h3>
+
+  {% if group.people[0] %}
+    {% comment %}array of people{% endcomment %}
+    <ul>
+      {% for person in group.people %}
+        <li>{{ person }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <dl>
+      {% for person in group.people %}
+        <dt>{{ person[0] }}</dt>
+        <dd>{{ person[1] }}</dd>
+      {% endfor %}
+    </dl>
+  {% endif %}
+
+{% endfor %}

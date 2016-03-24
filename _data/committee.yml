@@ -1,0 +1,27 @@
+- name: Office Bearers
+  people:
+    President: Sam Ryan
+    Secretary: Will King
+    Treasurer: Jacob Vyse
+
+- name: Liberation Officers
+  people:
+    Asexual and Aromantic Officer: Rosie Hawtin
+    Bisexual and Pansexual Officer: Cynthia Hamadi
+    <abbr title="Black and Marginalised Ethnicities">BME</abbr> Officer: Saaraa Sadiq
+    Disability and Mental Health Officer: Ryan Bittinger
+    Trans, Non-Binary and Intersex Officer: Skye Gaughan
+    Women’s Officer: Erin Crockett
+
+- name: Other positions
+  people:
+    Campaigns Officer: Ali Hudson
+    Men’s Officer: Stephen McGarry
+    Postgrad and Mature Students Officer: Mungo Frost
+    Tech Support: Ross Penman
+    Welfare Officer: Hannah Deacon
+
+- name: Ordinary members
+  people:
+    - Hannah Mayr
+    - Tiger Strode
