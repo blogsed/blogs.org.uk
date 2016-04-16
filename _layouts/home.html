@@ -19,7 +19,9 @@ layout: base
 
 {% if page.url == "/" or page.url == "/index.html" %}
   {% assign event = events | first %}
-  {% include event.html event=event %}
+  {% if event %}
+    {% include event.html event=event %}
+  {% endif %}
 {% endif %}
 
 {{ content }}
