@@ -5,11 +5,13 @@ set -ue
 api="https://graph.facebook.com/v2.5"
 auth="access_token=$ACCESS_TOKEN"
 
+json=""
+
 mkdir -p _data/events
 
 get_events() {
   url="$api/$1/events?since=$(date +%s)&$auth"
-  json="$(curl "$url")"
+  json="$json$(curl "$url"; echo)"
   # convert to yaml
   printf -- '---\n%s' "$json" | sed 's/\\\//\//g'
 }
