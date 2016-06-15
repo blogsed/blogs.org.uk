@@ -15,6 +15,8 @@ highlighter: rouge
 gist:
   noscript: false
 
+timezone: Europe/London
+
 links:
   email:
     address: blogs.edinburgh@hotmail.co.uk
