@@ -3,28 +3,34 @@
 
 html {
   background: $green;
-  
+
   @media (min-width: 75em) {
     padding: 0 10%;
-    
+
     &:before, &:after {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 0;
       bottom: 0;
       width: 50%;
     }
-    
+
     &:before { left: 0; background: white; }
     &:after { right: 0; background: $green; }
   }
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
+
+  @include big {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 body {
-//   background: #04bf7e;
   font-family: Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  width: 100%;
 }
