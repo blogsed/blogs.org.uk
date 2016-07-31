@@ -18,7 +18,9 @@ title: BLOGS Committee
     <dl>
       {% for person in group.people %}
         <dt>{{ person[0] }}</dt>
-        <dd>{{ person[1] }}</dd>
+        <dd>{{ person[1] | default:
+          "<i>Vacant ⏤ will be filled by an upcoming Extraordinary General Meeting.</i>"
+        }}</dd>
       {% endfor %}
     </dl>
   {% endif %}
