@@ -67,6 +67,10 @@ li {
     margin: 1em 0;
   }
 
+  :link {
+    color: $pink;
+  }
+
   :last-child {
     margin-bottom: 0;
   }
