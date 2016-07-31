@@ -8,8 +8,18 @@
   </a>
 
   <nav class="header-navigation">
-    <a class="header-navigation-link facebook u-url" target="_blank" {% include links/facebook.html %}><span class="header-navigation-link-replaceable">Facebook</span></a>
-    <a class="header-navigation-link twitter u-url" target="_blank" {% include links/twitter.html %}><span class="header-navigation-link-replaceable">Twitter</span></a>
+    {% include link.html
+      link='facebook'
+      attributes='class="header-navigation-link facebook u-url" target="_blank"'
+      content='<span class="header-navigation-link-replaceable">Facebook</span>'
+    %}
+
+    {% include link.html
+      link='twitter'
+      attributes='class="header-navigation-link twitter u-url" target="_blank"'
+      content='<span class="header-navigation-link-replaceable">Twitter</span>'
+    %}
+
     <a class="header-navigation-link" href="/contact.html">Contact</a>
     <a class="header-navigation-link" href="https://www.facebook.com/groups/edunilgbt/events/" target="_blank">Events</a>
     <a class="header-navigation-link" href="/join.html">Join</a>

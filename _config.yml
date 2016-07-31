@@ -17,14 +17,6 @@ gist:
 
 timezone: Europe/London
 
-links:
-  email:
-    address: blogs.edinburgh@hotmail.co.uk
-    name: BLOGS — Edinburgh University's LGBT+ Society
-  facebook:
-    url: https://www.facebook.com/groups/edunilgbt/
-    title: BLOGS - Edinburgh University's Lesbian, Gay, Bisexual, Trans & Intersex Soc
-
 exclude:
   - CNAME
   - CODE_OF_CONDUCT.md

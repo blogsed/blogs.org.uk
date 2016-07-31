@@ -1,0 +1,10 @@
+{% assign key = include.link %}{%
+assign link = site.data.links[key] %}
+{% capture attributes %}
+{% if key == 'email'
+%}href="mailto:{{ link.name }} <{{ link.address }}>"{%
+else
+%}title="{{ link.title }}"
+href="{{ link.url }}"{%
+endif %}
+{% endcapture %}<a {{ attributes }} {{ include.attributes }}>{{ include.content | default: key }}</a>
