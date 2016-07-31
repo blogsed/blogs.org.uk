@@ -37,7 +37,6 @@ li {
     text-align: right;
     float: right;
     white-space: nowrap;
-    padding-right: 3em;
     position: relative;
 
     &-photo {
@@ -46,6 +45,10 @@ li {
       width: 2em;
       height: 2em;
       border-radius: 100%;
+
+      & ~ .article-author-name, & ~ .article-author-job {
+        margin-right: 3em;
+      }
     }
 
     &-name {
