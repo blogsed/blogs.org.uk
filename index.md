@@ -2,14 +2,15 @@
 layout: article
 title: Welcome
 author:
-  name: Sam Ryan
-  description: President
+  name: Rosie Hawtin and Saaraa Sadiq
+  description: Co-presidents
 ---
 
 Hello, and welcome to the BLOGS website!
 
-We are the University of Edinburgh’s LGBT+ society, here to bring you awesome events including, but not limited to, chilled out chats, discussion events, trips to different LGBT+ spaces in other cities, informative talks, a bit of campaigning, nights out, as well as collaborating with other EdUni societies.
+We are the University of Edinburgh’s LGBT+ society. We’re here to provide a safe and supportive space for LGBT+ students to socialise, relax, discuss issues, and get involved with the wider community, and we welcome anyone who identifies under the LGBT+ umbrella. We put on a range of events, including casual chatty socials, discussions, informational talks, campaigning, and nights out; all of our events can be found on our {% include link.html link="facebook" content="Facebook Page" %} (subscribe to be notified when we set up an event!) and in our newsletter. 
 
-We provide a safe space for all those identifying as LGBT+ to socialise, discuss issues and be involved with the general LGBT+ community. Furthermore, we have various officers (just check out our committee page) who provide advice and support as well as holding their own platform of information, discussion and social events subject to their particular sub-group within the society.
+We have set up our committee so that all parts of the LGBT+ community are represented, and you can find out who they are over on our committee page. Our various officers provide advice and support as well as holding their own platform of information, discussion and social events for their sub-group within the society.
 
-If you have any queries or comments, please don’t hesitate to <a {% include links/email.html %}>email us</a> or get us on <a {% include links/facebook.html %}>Facebook</a>.
+Committee members are available to chat if you have any questions, comments or just want to find out more about BLOGS, so please feel free to get in touch with us by {% include link.html link="email" %} or on {% include link.html link="facebook" content="Facebook" %}.
+
