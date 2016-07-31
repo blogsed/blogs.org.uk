@@ -20,8 +20,13 @@
       content='<span class="header-navigation-link-replaceable">Twitter</span>'
     %}
 
-    <a class="header-navigation-link" href="/contact.html">Contact</a>
+    {% include link.html
+      link='newsletter'
+      attributes='class="header-navigation-link" target="_blank"'
+      content='Newsletter' %}
+
     <a class="header-navigation-link" href="https://www.facebook.com/groups/edunilgbt/events/" target="_blank">Events</a>
+    <a class="header-navigation-link" href="/contact.html">Contact</a>
     <a class="header-navigation-link" href="/join.html">Join</a>
     <a class="header-navigation-link" href="/committee.html">Committee</a>
   </nav>
