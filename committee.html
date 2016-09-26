@@ -17,10 +17,15 @@ title: BLOGS Committee
   {% else %}
     <dl>
       {% for person in group.people %}
+        {% capture vacant %}
+          <i>Vacant ⏤ {% if person[0] == "LGBT+ Community Engagement Officer" %}
+            this position on the committee is offered to the incumbent EUSA LGBT+ Liberation Convenor.
+          {% else %}
+            will be filled by an upcoming Extraordinary General Meeting.
+          {% endif %}</i>
+        {% endcapture %}
         <dt>{{ person[0] }}</dt>
-        <dd>{{ person[1] | default:
-          "<i>Vacant ⏤ will be filled by an upcoming Extraordinary General Meeting.</i>"
-        }}</dd>
+        <dd>{{ person[1] | default: vacant }}</dd>
       {% endfor %}
     </dl>
   {% endif %}
