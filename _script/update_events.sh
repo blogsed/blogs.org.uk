@@ -10,7 +10,11 @@ all_json=""
 mkdir -p _data/events
 
 get_events() {
-  url="$api/$1/events?since=$(date +%s)&$auth"
+  local params="since=$(date +%s)"
+  params="$params&fields=id,name,description,start_time,end_time,updated_time"
+  params="$params&$auth"
+
+  url="$api/$1/events?$params"
   json="$(curl "$url")"
   all_json="$all_json$json$(echo)"
   # convert to yaml
