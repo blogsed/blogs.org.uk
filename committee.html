@@ -17,6 +17,9 @@ title: BLOGS Committee
   {% else %}
     <dl>
       {% for person in group.people %}
+        {% if person[0] == "Ex-Officio" and person[1] == null %}
+          {% continue %}
+        {% endif %}
         {% capture vacant %}
           <i>Vacant ⏤ {% if person[0] == "LGBT+ Community Engagement Officer" %}
             this position on the committee is offered to the incumbent EUSA LGBT+ Liberation Convenor.
