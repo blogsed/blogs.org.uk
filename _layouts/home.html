@@ -2,20 +2,7 @@
 layout: base
 ---
 
-{% comment %}
-  Create events array
-
-  Once GitHub Pages upgrades to Liquid 4.0 this can be made
-  _a lot_ simpler by using the `concat:` filter.
-{% endcomment %}
-{% assign events = '' | split: '' %}
-{% for event in site.data.events.group.data %}
-  {% assign events = events | push: event %}
-{% endfor %}
-{% for event in site.data.events.page.data %}
-  {% assign events = events | push: event %}
-{% endfor %}
-{% assign events = events | sort: 'start_time' %}
+{% assign events = site.data.events.page.data | sort: 'start_time' %}
 
 {% if page.url == "/" or page.url == "/index.html" %}
   {% assign event = events | first %}
