@@ -1,0 +1,54 @@
+---
+data:
+- id: '140404793320621'
+  name: Major! Film Screening
+  description: All our welcome to join us to watch this fabulous documentary about Miss Major, an amazing transwoman and activist. There will be snacks and treats!
+  start_time: '2018-03-06T17:00:00+0000'
+  end_time: '2018-03-06T19:00:00+0000'
+  updated_time: '2018-02-20T11:17:32+0000'
+- id: '150629222312093'
+  name: 'DMS presents Genesis: A Queer Disco Celebration'
+  description: |-
+    In honour of LGBTQ+ History Month, the Dance Music Society invites you to come and celebrate the queer roots of modern dance music!
+
+    We'll be celebrating disco and its many reverberations through electronic music and pop culture. There'll be disco new and old, anthems and deep cuts alike, through to italo-disco, Chicago house, 80s synthpop and beyond; expect some LGBTQ+ anthems in there too! Commemorating the vibes of Studio 54, The Loft, Paradise Garage, queer havens which acted as the formative sites of dance music culture. People of all genders and sexualities are invited to come and party in an inclusive atmosphere and be yourself
+
+    Fierce outfits encouraged, think Studio 54 glam/NY Club Kids vibes - best look wins a litre of voddy
+
+    Safe Space policy - disco and disrespect do not mix!
+    Gender neutral toilets on site
+
+    Line-up:
+    Alex Kunst
+    DJ Other
+    Pallas
+
+    x
+
+    Entry: £2 students/£3 non-students/Free for DMS members
+
+    RA: https://www.residentadvisor.net/events/1071316
+
+    Join the Dance Music Society here:
+    https://www.eusa.ed.ac.uk/societies/society/DanceMusicSoc/
+  start_time: '2018-02-27T23:00:00+0000'
+  end_time: '2018-02-28T03:00:00+0000'
+  updated_time: '2018-02-15T16:20:02+0000'
+- id: '597244120607868'
+  name: PrideSoc x DMS Genesis Pre-Party
+  description: |-
+    Ahead of Genesis, DMS's queer disco party in The Wee Red Bar, join PrideSoc and DMS in Paradise Palms from 21:00 for some pre-party fun to get you in the mood. Cheap drinks, good people and good vibes guaranteed, as well as plenty of disco tunes to get you warmed up ✨
+
+    All welcome, free of charge
+  start_time: '2018-02-27T21:00:00+0000'
+  end_time: '2018-02-28T00:00:00+0000'
+  updated_time: '2018-02-21T20:46:41+0000'
+- id: '187284352024882'
+  name: Colour 5k suppporting LGBT+ History Month
+  description: "*SAVE THE DATE*\n\nAfter the success of the Edinburgh Girls Can 5k\
+    \ in November, save the date for our next 5k in support of LGBT+ History Month!!\
+    \ \n\nThis time with a colourful twist......\n\nAgain, ABSOLUTELY EVERYONE welcome.\
+    \ \n\nKeep an eye out for more details to follow!!!"
+  start_time: '2018-02-25T15:00:00+0000'
+  end_time: '2018-02-25T17:00:00+0000'
+  updated_time: '2018-02-04T22:39:21+0000'
